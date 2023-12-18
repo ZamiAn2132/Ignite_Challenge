@@ -1,0 +1,22 @@
+ trigger:
+ - main
+
+ pool:
+   vmImage: 'windows-latest'
+
+ stages:
+ - stage: Dev
+   jobs:
+   - job: Build
+     steps:
+     - script: echo Build
+ - stage: Test
+   jobs:
+   - job: Test
+     steps:
+     - script: echo Test
+ - stage: Production
+   jobs:
+   - job: Deploy
+     steps:
+     - script: echo Deploy
